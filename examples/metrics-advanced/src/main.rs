@@ -1,6 +1,4 @@
-use opentelemetry::global;
-use opentelemetry::Key;
-use opentelemetry::KeyValue;
+use opentelemetry::{global, KeyValue, Key};
 use opentelemetry_sdk::metrics::{
     Aggregation, Instrument, PeriodicReader, SdkMeterProvider, Stream, Temporality,
 };
