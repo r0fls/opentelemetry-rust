@@ -1,11 +1,9 @@
-use opentelemetry::global;
-use opentelemetry::KeyValue;
+use opentelemetry::{global, KeyValue};
 use opentelemetry_sdk::metrics::PeriodicReader;
 use std::error::Error;
 use tracing::info;
-use tracing_subscriber::fmt;
+use tracing_subscriber::{fmt, EnvFilter};
 use tracing_subscriber::prelude::*;
-use tracing_subscriber::EnvFilter;
 
 fn init_meter_provider() -> opentelemetry_sdk::metrics::SdkMeterProvider {
     let exporter = opentelemetry_stdout::MetricExporterBuilder::default().build();
